@@ -63,7 +63,7 @@ footer{margin-top:40px;color:var(--mute);font-size:15px}
 <div class="rule"><b>먼저</b>여기 있는 자료는 모두 지어낸 가상 자료입니다. 실습할 때도 실제 사건·이름·일정·내부 문서는 넣지 않습니다.</div>
 
 <nav>
-  <a href="#plan">진행표</a><a href="#p0">시작하기 전에</a><a href="#get">자료 받기</a><a href="#p1">실습 A · 표 정리</a><a href="#p2">실습 B · 윤문</a><a href="#p3">실습 C · 우리 기관 규칙 더하기</a><a href="#p4">실습 D · 스킬 한 장</a><a href="#p5">E · 회의록</a><a href="#p6">F · 민원 답변</a><a href="#p7">G · 그래프</a><a href="#p8">H · 번역</a><a href="#p9">I · 교육 자료</a><a href="#share">나누기</a>
+  <a href="#plan">진행표</a><a href="#p0">시작하기 전에</a><a href="#get">자료 받기</a><a href="#install">스킬 설치</a><a href="#p1">실습 A · 표 정리</a><a href="#p2">실습 B · 윤문</a><a href="#p3">실습 C · 우리 기관 규칙 더하기</a><a href="#p4">실습 D · 스킬 한 장</a><a href="#p5">E · 회의록</a><a href="#p6">F · 민원 답변</a><a href="#p7">G · 그래프</a><a href="#p8">H · 번역</a><a href="#p9">I · 교육 자료</a><a href="#share">나누기</a>
 </nav>
 
 <section class="card" id="plan">
@@ -127,6 +127,62 @@ footer{margin-top:40px;color:var(--mute);font-size:15px}
   </details>
   <div class="ph"><b>윤문 스킬 글</b><button class="copy" data-t="skill">복사</button></div>
   <div class="prompt" id="skill" style="max-height:260px;overflow:auto">불러오는 중…</div>
+</section>
+
+<section class="card hi" id="install">
+  <span class="tag">스킬 설치하기</span>
+  <h2>윤문 스킬과 기억 도구</h2>
+  <p class="mute">Claude 를 어디서 쓰느냐에 따라 방법이 다릅니다. 오늘 실습은 웹(claude.ai)에서 하므로 <b>①</b> 과 <b>③</b> 만 하면 됩니다.</p>
+
+  <h3>① 윤문 스킬 — 웹(claude.ai)에서</h3>
+  <ol class="steps">
+    <li><b>가장 쉬운 방법.</b> 새 대화를 열고 위 「윤문 스킬 글」을 복사해 붙여 넣습니다. 그 대화 안에서는 계속 이 기준으로 고쳐 줍니다. 실습 B 가 이 방법입니다.</li>
+    <li><b>지시문으로 설치하기.</b> 새 대화에 아래 지시문을 붙여 넣고, 줄을 바꿔 「윤문 스킬 글」을 이어 붙여 보냅니다. 스킬 카드와 「저장」 단추가 나오면 내용을 읽어 본 뒤 저장합니다. <span class="see">요금제에 따라 저장 단추가 안 나올 수 있습니다. 안 나오면 위의 붙여 넣기 방법으로 씁니다.</span></li>
+    <li><b>파일로 올리기.</b> 설정의 「기능」 안에 「스킬」 메뉴가 보이면, 받은 <b>yunmun_skill.zip</b> 을 그대로 올립니다.</li>
+  </ol>
+  <div class="ph"><b>윤문 스킬 설치 지시문 (웹)</b><button class="copy" data-t="ins1">복사</button></div>
+  <div class="prompt" id="ins1">아래 글을 「yunmun」이라는 이름의 스킬로 만들어 줘. 내용은 한 글자도 바꾸지 말고 그대로 넣어. 설명(description)은 「한국어 공문·안내문·보고서 초안을 읽는 사람에 맞게 다듬는다. 윤문해 줘, 다듬어 줘, 쉬운 말로 고쳐 줘 같은 요청에 쓴다」로 해 줘. 만든 다음 내가 저장할 수 있게 보여 줘.</div>
+
+  <h3>② 윤문 스킬 — Claude Code(터미널·데스크톱 앱)에서</h3>
+  <p>개인 노트북에 Claude Code 를 쓰는 분만 해당합니다. Claude Code 입력창에 아래 지시문을 붙여 넣습니다.</p>
+  <div class="ph"><b>윤문 스킬 설치 지시문 (Claude Code)</b><button class="copy" data-t="ins2">복사</button></div>
+  <div class="prompt" id="ins2">https://livewithdev00-blip.github.io/police/files/yunmun_skill.zip 을 받아서 내 스킬 폴더(~/.claude/skills/yunmun)에 풀어 줘. 풀기 전에 안에 든 SKILL.md 내용을 나에게 먼저 보여 주고, 내가 「설치해」라고 하면 그때 설치해. 다른 파일은 건드리지 마.</div>
+
+  <h3>③ 기억 노트 — 웹(claude.ai)에서</h3>
+  <p>웹 대화는 새 대화를 열면 앞 대화를 잊습니다. 대화가 끝날 때 꼭 남길 것만 한 장으로 적어 두고, 다음 대화 첫머리에 붙여 넣어 이어 가는 방법입니다. 프로그램을 설치하지 않습니다.</p>
+  <ol class="steps">
+    <li>실습을 하던 대화에 아래 「기억 노트 글」을 붙여 넣고 보냅니다. 「준비됐습니다」라고 답합니다.</li>
+    <li>「기억 노트 만들어 줘」라고 보냅니다. <span class="see">하던 일 · 정한 것 · 지적받은 것 · 남은 것 · 다음에 시작할 말, 다섯 가지가 한 장으로 나옵니다.</span></li>
+    <li>나온 한 장을 복사해 메모장에 저장합니다.</li>
+    <li>「새로 만들기」로 새 대화를 열고, 저장한 한 장을 붙여 넣은 뒤 「이어서 하자」라고 보냅니다. 앞 대화를 기억한 것처럼 이어지는지 봅니다.</li>
+  </ol>
+  <div class="dl"><a class="btn line" href="files/memory_note_prompt.txt" download="기억노트_붙여넣기용.txt">기억 노트 글 받기 (txt)</a></div>
+  <div class="ph"><b>기억 노트 글</b><button class="copy" data-t="memnote">복사</button></div>
+  <div class="prompt" id="memnote" style="max-height:220px;overflow:auto" data-load="files/memory_note_prompt.txt">불러오는 중…</div>
+
+  <h3>④ claude-mem — Claude Code 에서만 됩니다</h3>
+  <p>claude-mem 은 AI가 한 작업을 내 컴퓨터에 기록해 두었다가, 다음에 열 때 관련된 내용을 다시 넣어 주는 공개 프로그램입니다(Apache-2.0). <b class="no">웹(claude.ai) 대화창에는 설치할 수 없습니다.</b> 터미널에서 쓰는 Claude Code 같은 도구에 붙여 씁니다.</p>
+  <div class="rule" style="background:#7A1D22"><b>꼭 읽기</b>업무용 PC 에는 설치하지 않습니다. 개인 노트북에서, 공개 자료와 가상 자료로만 씁니다.</div>
+  <ul>
+    <li>AI가 읽고 고치고 실행한 것을 전부 기록합니다. 업무 자료가 있는 폴더에서는 쓰지 않습니다.</li>
+    <li>기록은 내 컴퓨터의 <b>~/.claude-mem</b> 폴더에 저장됩니다. 클라우드에 올리는 기능은 내가 켜야만 켜집니다.</li>
+    <li>설치 중에 이메일 로그인과 유료 체험(결제 수단 입력) 화면이 나옵니다. 꼭 해야 하는 것은 아닙니다. 아래 지시문은 로그인 없이 설치하게 적었습니다.</li>
+    <li>익명 사용 통계가 기본으로 켜져 있습니다. 끄려면 터미널에 <b>npx claude-mem telemetry disable</b> 을 입력합니다.</li>
+    <li>컴퓨터에 Node.js(20.19 이상)가 있어야 합니다.</li>
+  </ul>
+  <div class="dl">
+    <a class="btn" href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">claude-mem 공식 저장소 열기</a>
+    <a class="btn line" href="https://github.com/thedotmack/claude-mem/archive/refs/heads/main.zip">소스 받기 (zip)</a>
+    <a class="btn line" href="https://docs.claude-mem.ai/installation" target="_blank" rel="noopener">공식 설치 안내</a>
+  </div>
+  <div class="ph"><b>방법 1 · Claude Code 안에서 (한 줄씩 차례로 입력)</b><button class="copy" data-t="ins3">복사</button></div>
+  <div class="prompt" id="ins3">/plugin marketplace add thedotmack/claude-mem
+/plugin install claude-mem</div>
+  <p class="mute">두 줄을 한 줄씩 입력하고, Claude Code 를 껐다 켭니다.</p>
+  <div class="ph"><b>방법 2 · Claude Code 에게 시키기 (지시문)</b><button class="copy" data-t="ins4">복사</button></div>
+  <div class="prompt" id="ins4">claude-mem 을 설치하려고 해. 먼저 https://github.com/thedotmack/claude-mem 의 README 에서 설치 방법과 시스템 요구 사항을 읽고, 내 컴퓨터에 Node.js 가 있는지 확인해서 무엇을 할지 순서대로 알려 줘. 내가 「진행해」라고 하면 그때 시작해.
+로그인과 유료 체험은 하지 않을 거야. CLAUDE_MEM_ONLINE_OPTIN=false 로 설치하고, 설치가 끝나면 npx claude-mem telemetry disable 로 사용 통계를 꺼 줘.
+결제 수단이나 이메일을 묻는 화면이 나오면 진행하지 말고 멈춰서 나에게 알려 줘. 마지막에 npx claude-mem doctor 로 잘 깔렸는지 확인해서 결과를 보여 줘.</div>
 </section>
 
 <details class="stuck card"><summary>막혔을 때</summary>
