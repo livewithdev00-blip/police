@@ -62,6 +62,11 @@ ol.three li::marker{color:var(--blue);font-weight:800}
 .okline{margin:6px 0 0;color:#1E7A41;font-weight:700;font-size:16.5px}
 h3.sub{font-size:18px;margin-top:14px}
 table.plan td b{color:var(--ink)}
+nav a.hot{background:var(--blue);color:#fff;border-color:var(--blue)}
+button.copy.big{background:var(--blue);color:#fff;font-size:19px;padding:12px 22px}
+button.copy.big.ok{background:#1E7A41;border-color:#1E7A41;color:#fff}
+.onebox{border:3px solid var(--blue);border-radius:16px;padding:16px 18px;margin:14px 0;background:#fff}
+.onebox h4{margin:0 0 6px;font-size:20px}
 </style>
 </head>
 <body>
@@ -75,7 +80,7 @@ table.plan td b{color:var(--ink)}
 <div class="rule"><b>먼저</b>여기 있는 자료는 모두 지어낸 가상 자료입니다. 실습할 때도 실제 사건·이름·일정·내부 문서는 넣지 않습니다.</div>
 
 <nav>
-  <a href="#plan">진행표</a><a href="#get">준비 · 자료 받기</a><a href="#basic">기본 익히기</a><a href="#p1">실습 A</a><a href="#p2">B</a><a href="#p3">C</a><a href="#p4">D</a><a href="#pick">골라서 E~I</a><a href="#install">스킬 가져가기</a><a href="#more">더 해 보기</a><a href="#share">나누기</a>
+  <a href="#plan">진행표</a><a href="#get">준비 · 자료 받기</a><a href="#basic">기본 익히기</a><a href="#p1">실습 A</a><a href="#p2">B</a><a href="#p3">C</a><a href="#p4">D</a><a href="#pick">골라서 E~I</a><a href="#install" class="hot">★ 스킬 가져가기</a><a href="#more">더 해 보기</a><a href="#share">나누기</a>
 </nav>
 
 <section class="card" id="plan">
@@ -458,21 +463,26 @@ table.plan td b{color:var(--ink)}
 
 <section class="card hi" id="install">
   <span class="tag">스킬 가져가기</span>
-  <h2>윤문 스킬 저장 · 기억 노트 · claude-mem</h2>
+  <h2>오늘 쓴 스킬을 가져갑니다</h2>
   <p class="mute">오늘 쓴 것을 가져가는 방법입니다. 웹(claude.ai)에서 실습하신 분은 <b>①</b> 과 <b>②</b> 만 하면 됩니다.</p>
 
   <h3>① 윤문 스킬을 내 Claude 에 저장합니다 — 웹(claude.ai)</h3>
+  <div class="onebox">
+    <h4>가장 쉬운 방법 — 세 번만 누르면 됩니다</h4>
+    <ol class="steps">
+      <li>아래 파란 단추 <b>「한 번에 복사」</b>를 누릅니다. 설치 지시문과 윤문 스킬 글이 함께 복사됩니다.</li>
+      <li>Claude 탭으로 가서 「새로 만들기」를 누르고, 입력창을 한 번 누른 뒤 <b>Ctrl+V</b>(맥은 ⌘+V)로 붙여 넣고 Enter 로 보냅니다.</li>
+      <li>잠시 뒤 <b>/yunmun</b> 이라고 적힌 카드가 나옵니다. 카드 안의 「콘텐츠」를 눌러 내용을 읽어 본 뒤, 오른쪽 아래 <b>「저장」</b>을 누릅니다. <span class="see">이렇게 보이면 맞습니다 · 카드에 「닫기」와 「저장」 단추가 나란히 있습니다.</span></li>
+    </ol>
+    <div class="ph"><b>윤문 스킬 설치 글 (지시문 + 스킬 글)</b><button class="copy big" data-t="insall">한 번에 복사</button></div>
+    <div class="prompt" id="insall" style="max-height:170px;overflow:auto">불러오는 중…</div>
+    <p class="mute">저장한 뒤에는 새 대화에서 「윤문 스킬로 아래 글을 고쳐 줘」라고 하면 됩니다. 「저장」 단추가 안 나오면 요금제에서 안 되는 것이니, <a href="#p2">실습 B</a> 처럼 윤문 스킬 글을 대화에 붙여 넣어 씁니다.</p>
+  </div>
 <div class="shot"><div class="shot-h"><span class="chip2">스킬 설치</span><b>윤문 스킬을 내 Claude 에 저장합니다</b></div><img src="img/g_ins1.jpg" alt="윤문 스킬을 내 Claude 에 저장합니다 화면" loading="lazy"><ol class="three"><li>아래 설치 지시문을 복사해 붙여 넣습니다</li><li>줄을 바꿔 「윤문 스킬 글」을 이어 붙이고 보냅니다</li><li>카드의 내용을 읽어 본 뒤 「저장」을 누릅니다</li></ol><p class="okline">저장 단추가 안 나오면 붙여 넣어 쓰는 방법으로 합니다</p></div>
-  <h3 class="sub">자세한 순서</h3>
-  <ol class="steps">
-    <li><b>가장 쉬운 방법.</b> 새 대화를 열고 <a href="#p2">실습 B</a> 의 「윤문 스킬 글」을 복사해 붙여 넣습니다. 그 대화 안에서는 계속 이 기준으로 고쳐 줍니다. 실습 B 가 이 방법입니다.</li>
-    <li><b>지시문으로 설치하기.</b> 새 대화에 아래 지시문을 붙여 넣고, 줄을 바꿔 「윤문 스킬 글」을 이어 붙여 보냅니다. 스킬 카드와 「저장」 단추가 나오면 내용을 읽어 본 뒤 저장합니다. <span class="see">요금제에 따라 저장 단추가 안 나올 수 있습니다. 안 나오면 위의 붙여 넣기 방법으로 씁니다.</span></li>
-    <li><b>파일로 올리기.</b> 설정의 「기능」 안에 「스킬」 메뉴가 보이면, 받은 <b>yunmun_skill.zip</b> 을 그대로 올립니다.</li>
-  </ol>
-  <div class="ph"><b>윤문 스킬 설치 지시문 (웹)</b><button class="copy" data-t="ins1">복사</button></div>
-  <div class="prompt" id="ins1">아래 글을 「yunmun」이라는 이름의 스킬로 만들어 줘. 내용은 한 글자도 바꾸지 말고 그대로 넣어. 설명(description)은 「한국어 공문·안내문·보고서 초안을 읽는 사람에 맞게 다듬는다. 윤문해 줘, 다듬어 줘, 쉬운 말로 고쳐 줘 같은 요청에 쓴다」로 해 줘. 만든 다음 내가 저장할 수 있게 보여 줘.</div>
-
-  <h3>② 기억 노트 — 새 대화에서도 이어 가는 법 · 웹(claude.ai)</h3>
+  <details><summary>다른 방법 — 파일로 올리기</summary>
+    <p>Claude 화면 왼쪽 아래 내 이름을 누르고 「설정」으로 갑니다. 「기능」 안에 「스킬」 메뉴가 보이면, 받은 <b>yunmun_skill.zip</b> 을 그대로 올립니다. 메뉴가 안 보이면 위의 방법으로 합니다.</p>
+  </details>
+<h3>② 기억 노트 — 새 대화에서도 이어 가는 법 · 웹(claude.ai)</h3>
 <div class="shot"><div class="shot-h"><span class="chip2">기억 노트</span><b>새 대화에서도 이어 가는 법</b></div><img src="img/g_mem1.jpg" alt="새 대화에서도 이어 가는 법 화면" loading="lazy"><ol class="three"><li>하던 대화에 「기억 노트 글」을 붙여 넣고 보냅니다</li><li>「기억 노트 만들어 줘」라고 보내고, 나온 한 장을 저장합니다</li><li>새 대화에 그 한 장을 붙여 넣고 「이어서 하자」라고 보냅니다</li></ol><p class="okline">실제 사건·이름은 기억 노트에 적지 않습니다</p></div>
 
   <p>웹 대화는 새 대화를 열면 앞 대화를 잊습니다. 대화가 끝날 때 꼭 남길 것만 한 장으로 적어 두고, 다음 대화 첫머리에 붙여 넣어 이어 가는 방법입니다. 프로그램을 설치하지 않습니다.</p>
@@ -547,6 +557,7 @@ table.plan td b{color:var(--ink)}
 const load = (id, url, strip) => fetch(url).then(r => r.text()).then(t => { document.getElementById(id).textContent = strip ? t.replace(/^﻿/, '').trim() : t.trim(); }).catch(() => { document.getElementById(id).textContent = '불러오지 못했습니다. 위의 받기 단추로 파일을 받아 여세요.'; });
 load('skill', 'files/yunmun_prompt.txt', true);
 load('draft', 'files/notice_draft.txt', true);
+fetch('files/yunmun/SKILL.md').then(r => r.text()).then(t => { const body = t.split('---').slice(2).join('---').trim(); document.getElementById('insall').textContent = '아래 글을 「yunmun」이라는 이름의 스킬로 만들어 줘. 내용은 한 글자도 바꾸지 말고 그대로 넣어. 설명(description)은 「한국어 공문·안내문·보고서 초안을 읽는 사람에 맞게 다듬는다. 윤문해 줘, 다듬어 줘, 쉬운 말로 고쳐 줘 같은 요청에 쓴다」로 해 줘. 만든 다음 내가 저장할 수 있게 보여 줘.\n\n' + body; }).catch(() => { document.getElementById('insall').textContent = '불러오지 못했습니다. 실습 B 의 윤문 스킬 글을 붙여 넣어 쓰세요.'; });
 document.querySelectorAll('[data-load]').forEach(e => load(e.id, e.dataset.load, true));
 document.querySelectorAll('button.copy').forEach(b => b.addEventListener('click', async () => {
   const t = document.getElementById(b.dataset.t).innerText;
